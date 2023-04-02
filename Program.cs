@@ -48,7 +48,7 @@ namespace EditorTexto
             }
             while (Console.ReadKey().Key != ConsoleKey.Escape);
             {
-                Console.Write(text);
+                Salvar(text);
             }
         }
 
@@ -62,6 +62,10 @@ namespace EditorTexto
             {
                 file.Write(text);
             }
+
+            Console.WriteLine($"Arquivo {path} salvo com sucesso!");
+            Console.ReadLine();
+            Menu();
         }
     }
 }
